@@ -1,0 +1,7 @@
+DEF:int:a;
+MOV:int:a:5;
+
+OUT:var:a;
+MOV:int:a:96;
+
+OUT:var:a;
