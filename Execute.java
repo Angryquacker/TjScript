@@ -43,6 +43,14 @@ public class Execute {
         break;
       case "var":
         Utils.checkVariableValidity(variables, value);
+
+        for (int i = 0;i < variables.size();i++) {
+          if(value.equals(variables.get(i).name)) {
+            value = variables.get(i).value;
+            break;
+          }
+        }
+
         break;
       case "null":
         if (!value.equals("null")) {
@@ -53,6 +61,10 @@ public class Execute {
 
     for (int i = 0;i < variables.size();i++) {
       if (target.equals(variables.get(i).name)) {
+        if(!variables.get(i).type.equals(line.type)) {
+          throw new Error("Expected type: " + variables.get(i).type + " but got " + line.type + " instead");
+        }
+
         variables.get(i).value = value;
         return;
       }
