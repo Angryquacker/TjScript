@@ -12,7 +12,7 @@ MOV:int:eggs:2;
 
 OUT:var:cake; //Should output 1;
 OUT:var:batter; //Should output 50;
-OUT:var:eggs; //Should output
+OUT:var:eggs; //Should output 2;
 
 MOV:var:holder:a;
 
