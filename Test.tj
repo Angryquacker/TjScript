@@ -16,4 +16,4 @@ OUT:var:eggs; //Should output
 
 MOV:var:holder:a;
 
-OUT:var:holder;
+OUT:var:holder; //Should output 5;
