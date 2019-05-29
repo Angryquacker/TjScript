@@ -1,7 +1,19 @@
+DEF:int:cake;
+DEF:var:holder;
+DEF:int:batter;
+DEF:int:eggs;
 DEF:int:a;
+
 MOV:int:a:5;
 
-OUT:var:a;
-MOV:int:a:96;
+MOV:int:cake:1;
+MOV:int:batter:50;
+MOV:int:eggs:2;
 
-OUT:var:a;
+OUT:var:cake;
+OUT:var:batter;
+OUT:var:eggs;
+
+MOV:var:holder:a;
+
+OUT:var:holder;
