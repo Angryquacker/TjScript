@@ -10,9 +10,9 @@ MOV:int:cake:1;
 MOV:int:batter:50;
 MOV:int:eggs:2;
 
-OUT:var:cake;
-OUT:var:batter;
-OUT:var:eggs;
+OUT:var:cake; //Should output 1;
+OUT:var:batter; //Should output 50;
+OUT:var:eggs; //Should output
 
 MOV:var:holder:a;
 
