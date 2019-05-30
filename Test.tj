@@ -3,7 +3,9 @@ DEF:var:holder;
 DEF:int:batter;
 DEF:int:eggs;
 DEF:int:a;
+DEF:null:test;
 
+MOV:null:test:null;
 MOV:int:a:5;
 
 MOV:int:cake:1;
@@ -16,4 +18,6 @@ OUT:var:eggs; //Should output 2;
 
 MOV:var:holder:a;
 
-OUT:var:holder; //Should output 5;
+OUT:var:holder;
+OUT:var:test;
+OUT:null:"friend";
