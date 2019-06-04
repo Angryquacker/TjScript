@@ -16,6 +16,9 @@ public class Execute {
       case "OUT":
         OUT(line);
         break;
+      case "LOOP":
+        LOOP(line);
+        break;
     }
 
     return 0; //Status Codes: 0 -> Ok, -1: Error
@@ -91,5 +94,9 @@ public class Execute {
 
       System.out.println(value);
     }
+  }
+
+  private static void LOOP(Line line) {
+
   }
 }
