@@ -9,8 +9,8 @@ public class Line {
 
 
   public Line(String command, String type, String additionalData, int loopStart, int loopEnd) {
-    this.command = command;
-    this.type = type;
+    this.command = command.replaceAll("\\s", "");
+    this.type = type.replaceAll("\\s", "");
     this.additionalData = additionalData;
     this.loopStart = loopStart;
     this.loopEnd = loopEnd;
