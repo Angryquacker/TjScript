@@ -2,7 +2,7 @@ import java.util.ArrayList;
 import java.io.File;
 
 public class Utils {
-  public static String[] validCommands = {"MOV", "DEF", "OUT"};
+  public static String[] validCommands = {"MOV", "DEF", "OUT", "LOOP", "END"};
   private static String[] validTypes = {"int", "var", "null"};
   
   public static boolean commandCheck(String command) {
