@@ -9,6 +9,10 @@ public class Var {
   }
 
   public void setValue(String value) {
-    this.value = value;
+    if(this.type == "String") {
+      this.value = value;
+    } else {
+      this.value = value.replaceAll("\\s", "");
+    }
   }
 }
