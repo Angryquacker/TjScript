@@ -7,7 +7,7 @@ public class Utils {
   
   public static boolean commandCheck(String command) {
     for (int i = 0;i < validCommands.length;i++) {
-      if(command.equals(validCommands[i])) {
+      if(command.replaceAll("\\s", "").equals(validCommands[i])) {
         return true;
       }
     }
