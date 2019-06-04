@@ -4,6 +4,7 @@ DEF:int:batter;
 DEF:int:eggs;
 DEF:int:a;
 DEF:null:test;
+DEF:int:t;
 
 MOV:null:test:null;
 MOV:int:a:5;
@@ -14,9 +15,10 @@ MOV:int:eggs:2;
 
 LOOP:int:5;
 
-OUT:var:cake; //Should output 1;
-OUT:var:batter; //Should output 50;
-OUT:var:eggs; //Should output 2;
+  OUT:var:cake; //Should output 1;
+  OUT:var:batter; //Should output 50;
+  OUT:var:eggs; //Should output 2;
+  OUT:var:t;
 
 END:null:0;
 
