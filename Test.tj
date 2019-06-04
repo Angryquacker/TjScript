@@ -12,9 +12,13 @@ MOV:int:cake:1;
 MOV:int:batter:50;
 MOV:int:eggs:2;
 
+LOOP:int:5;
+
 OUT:var:cake; //Should output 1;
 OUT:var:batter; //Should output 50;
 OUT:var:eggs; //Should output 2;
+
+END:null:0;
 
 MOV:var:holder:a;
 
