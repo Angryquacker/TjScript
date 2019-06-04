@@ -3,7 +3,7 @@ import java.util.ArrayList;
 public class CommandLinker {
   public ArrayList<Line> lines = new ArrayList<>();
   
-  public void add(String line) {
+  public void add(String line, int loopStart, int loopEnd) {
     String[] tempArray = line.split(":");
 
     if(!Utils.commandCheck(tempArray[0])) {
@@ -21,7 +21,7 @@ public class CommandLinker {
 
     temp = temp.substring(0, temp.length() - 1);
 
-    this.lines.add(new Line(tempArray[0], tempArray[1], temp));
+    this.lines.add(new Line(tempArray[0], tempArray[1], temp, loopStart, loopEnd));
   }
 
   public Line get(int index) {
