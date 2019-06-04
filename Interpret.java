@@ -2,7 +2,7 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.File;
 import java.io.FileReader;
-import java.util.HashMap;
+import java.util.ArrayList;
 
 public class Interpret {
   private String[] commands;
@@ -31,8 +31,21 @@ public class Interpret {
   public void parse() {
     for (int i = 0;i < this.commands.length;i++) {
       if(this.commands[i].replaceAll("\\s","").startsWith("//")) continue;
-      
-      linker.add(this.commands[i]);
+      if(this.commands[i].replaceAll("\\s", "").startsWith("LOOP")) {
+        int startIndex = i;
+        int endIndex = 0;
+
+        for (int j = i;j < this.commands.length;j++) {
+          if (this.commands[j].replaceAll("\\s", "").startsWith("END")) {
+            endIndex = j;
+            linker.add(this.commands[i], startIndex, endIndex);
+            break;
+          }
+        }
+        continue;
+      }
+
+      linker.add(this.commands[i], 0, 0);
     }
   }
 
