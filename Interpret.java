@@ -7,7 +7,7 @@ import java.util.ArrayList;
 public class Interpret {
   private String[] commands;
   private String data = "";
-  private CommandLinker linker = new CommandLinker();
+  public static CommandLinker linker = new CommandLinker();
 
   public Interpret(String path) throws IOException {
     File file = new File(path);
@@ -50,8 +50,8 @@ public class Interpret {
   }
 
   public void execute() {
-    for (int i = 0;i < this.linker.lines.size();i++) {
-      Execute.run(this.linker.get(i));
+    for (int i = 0;i < linker.lines.size();i++) {
+      Execute.run(linker.get(i));
     }
   }
 }
