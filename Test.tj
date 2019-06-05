@@ -19,6 +19,8 @@ LOOP:var:eggs;
 
 END:null:0;
 
+COMMENT:Should ouput 2, 5 times;
+
 LOOP:int:5;
 
   OUT:null:2;
