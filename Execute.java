@@ -47,13 +47,7 @@ public class Execute {
       case "var":
         Utils.checkVariableValidity(variables, value);
 
-        for (int i = 0;i < variables.size();i++) {
-          if(value.equals(variables.get(i).name)) {
-            value = variables.get(i).value;
-            break;
-          }
-        }
-
+        value = Utils.getVarValue(variables, value);        
         break;
       case "null":
         if (!value.equals("null")) {
@@ -82,11 +76,8 @@ public class Execute {
 
       Utils.checkVariableValidity(variables, value);
 
-      for (int i = 0;i < variables.size();i++) {
-        if(value.equals(variables.get(i).name)) {
-          System.out.println(variables.get(i).value);
-        }
-      }
+      System.out.println(Utils.getVarValue(variables, value));
+
     } else {
       if(!line.type.equals("null")) {
         throw new Error("All non-variable outputs should be defined as null. If you were trying to output a variable, use type 'var'");
