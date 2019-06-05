@@ -4,7 +4,7 @@ public class Execute {
   static ArrayList<Var> variables = new ArrayList<>();
 
   public static int run(Line line) {
-    System.out.println(line.command);
+    //System.out.println(line.command);
 
     switch(line.command) {
       case "DEF":
@@ -97,6 +97,27 @@ public class Execute {
   }
 
   private static void LOOP(Line line) {
+    String data = line.additionalData.split(":")[0];
+    int iterations = 0;
 
+    if(line.type.equals("var")) {
+      iterations = Integer.parseInt(Utils.getVarValue(variables, data));
+    } else if (line.type.equals("int")) {
+      iterations = Integer.parseInt(data);
+    }
+
+    iterations--;
+
+    ArrayList<Line> lines = new ArrayList<>();
+
+    for (int i = line.loopStart;i < line.loopEnd;i++) {
+      lines.add(Interpret.linker.get(i));
+    }
+
+    for (int i = 0;i < iterations;i++) {
+      for (int j = 0;j < lines.size();j++) {
+        Execute.run(lines.get(j));
+      }
+    }
   }
 }
