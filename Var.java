@@ -9,7 +9,7 @@ public class Var {
   }
 
   public void setValue(String value) {
-    if(this.type == "String") {
+    if(this.type.equals("String")) {
       this.value = value;
     } else {
       this.value = value.replaceAll("\\s", "");
