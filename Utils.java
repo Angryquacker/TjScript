@@ -75,4 +75,14 @@ public class Utils {
 
     return extension;
   }
+
+  public static String getVarValue(ArrayList<Var> vars, String target) {
+    for (int i = 0;i < vars.size();i++) {
+      if(vars.get(i).name.equals(target)) {
+        return vars.get(i).value;
+      }
+    }
+
+    return "0";
+  }
 }
