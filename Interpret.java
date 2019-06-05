@@ -30,7 +30,6 @@ public class Interpret {
 
   public void parse() {
     for (int i = 0;i < this.commands.length;i++) {
-      if(this.commands[i].replaceAll("\\s","").startsWith("//")) continue;
       if(this.commands[i].replaceAll("\\s", "").startsWith("LOOP")) {
         int startIndex = i;
         int endIndex = 0;
