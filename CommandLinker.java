@@ -10,7 +10,7 @@ public class CommandLinker {
       throw new Error("Invalid Command\nExpected Command: " + Utils.getCommands() + "\n But got " + tempArray[0] + " instead");
     }
     
-    if(!Utils.typeCheck(tempArray[1])) {
+    if(!Utils.typeCheck(tempArray[1]) && !tempArray[0].equals("COMMENT")) {
       throw new Error("Invalid type supplied\nExpected Type: " + Utils.getTypes() + "\n But got " + tempArray[1] + " instead");
     }
   
@@ -19,7 +19,9 @@ public class CommandLinker {
       temp += tempArray[i] + ":";
     }
 
-    temp = temp.substring(0, temp.length() - 1);
+    if(!tempArray[0].equals("COMMENT")) {
+      temp = temp.substring(0, temp.length() - 1);
+    }
 
     this.lines.add(new Line(tempArray[0], tempArray[1], temp, loopStart, loopEnd));
   }
