@@ -98,7 +98,7 @@ public class Execute {
 
   private static void LOOP(Line line) {
     String data = line.additionalData.split(":")[0];
-    int iterations = 0;
+    int iterations = 50;
 
     if(line.type.equals("var")) {
       iterations = Integer.parseInt(Utils.getVarValue(variables, data));
