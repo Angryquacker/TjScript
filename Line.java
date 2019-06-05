@@ -12,7 +12,7 @@ public class Line {
     this.command = command.replaceAll("\\s", "");
     this.type = type.replaceAll("\\s", "");
     this.additionalData = additionalData;
-    this.loopStart = loopStart;
+    this.loopStart = loopStart + 1;
     this.loopEnd = loopEnd;
   }
 }
