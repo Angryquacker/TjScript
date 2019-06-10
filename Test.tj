@@ -1,0 +1,36 @@
+DEF:int:cake;
+DEF:var:holder;
+DEF:int:batter;
+DEF:int:eggs;
+DEF:int:a;
+DEF:null:test;
+DEF:int:t;
+
+MOV:null:test:null;
+MOV:int:a:5;
+
+MOV:int:cake:1;
+MOV:int:batter:50;
+MOV:int:eggs:2;
+
+LOOP:var:eggs;
+
+  OUT:var:cake;
+
+END:null:0;
+
+COMMENT:Should ouput 2, 5 times;
+
+LOOP:int:5;
+
+  OUT:null:2;
+
+END:null:0;
+
+MOV:var:holder:a;
+
+OUT:var:holder;
+OUT:var:test;
+OUT:null:"friend";
+
+LOAD:file:D:\workspace\TjScript\Fun.tj;
