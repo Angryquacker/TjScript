@@ -15,9 +15,7 @@ public class LOAD {
 		
 		String path = line.additionalData;
 		String name = new File(path).getName().toString();
-		name = name.substring(0, name.length() - 3);
-		
-		System.out.println(name);
+		name = name.substring(0, name.length() - 4);
 		
 		Function func = new Function(name, path);
 		

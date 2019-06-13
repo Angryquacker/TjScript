@@ -1,0 +1,6 @@
+DATA:void:[int-god, int-p, int-lol];
+
+OUT:null:"test";
+OUT:var:god;
+OUT:var:p;
+OUT:var:lol;

@@ -33,4 +33,13 @@ OUT:var:holder;
 OUT:var:test;
 OUT:null:"friend";
 
-LOAD:file:D:\workspace\TjScript\Fun.tj;
+LOAD:file:D:\workspace\TjScript\Test.tjf;
+
+EXEC:function:Test:[1, 2, 3];
+EXEC:function:Test:[4, 5, 6];
+
+LOOP:int:3;
+
+	EXEC:function:Test:[8, 9, 10];
+
+END:null:0;

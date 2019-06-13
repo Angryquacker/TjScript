@@ -5,7 +5,7 @@ import java.io.File;
 
 public class Utils {
   public static String[] validCommands = {"MOV", "DEF", "OUT", "LOOP", "END", "COMMENT", "LOAD", "EXEC"};
-  private static String[] validTypes = {"int", "var", "null", "file", "func"};
+  private static String[] validTypes = {"int", "var", "null", "file", "function"};
   
   public static boolean commandCheck(String command) {
     for (int i = 0;i < validCommands.length;i++) {
@@ -54,6 +54,16 @@ public class Utils {
     
     throw new Error("Specified Variable: " + var + " Does not exist");
   }
+  
+  public static boolean checkVarStatus(ArrayList<Var> vars, String var) {
+	    for (int i = 0;i < vars.size();i++) {
+	      if(var.equals(vars.get(i).name)) {
+	        return true;
+	      }
+	    }
+	    
+	    return false;
+	  }
   
   public static boolean checkFunctionValidity(ArrayList<Function> funcs, String function) {
 	for (int i = 0;i < funcs.size();i++) {

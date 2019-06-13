@@ -11,7 +11,7 @@ public class MOV {
 	    String target = tempData[0];
 
 	    Utils.checkVariableValidity(Execute.variables, target);
-
+	    
 	    switch(line.type) {
 	      case "int":
 	        try {

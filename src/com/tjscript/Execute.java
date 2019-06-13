@@ -15,8 +15,6 @@ public class Execute {
   public static ArrayList<Function> functions = new ArrayList<>();
 
   public static int run(Line line) throws IOException {
-    System.out.println(line.command);
-
     switch(line.command) {
       case "DEF":
         DEF.Def(line);
