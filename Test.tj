@@ -14,17 +14,13 @@ MOV:int:batter:50;
 MOV:int:eggs:2;
 
 LOOP:var:eggs;
-
-  OUT:var:cake;
-
+ 	OUT:var:cake;
 END:null:0;
 
 COMMENT:Should ouput 2, 5 times;
 
 LOOP:int:5;
-
-  OUT:null:2;
-
+ 	OUT:null:2;
 END:null:0;
 
 MOV:var:holder:a;
@@ -39,7 +35,5 @@ EXEC:function:Test:[1, 2, 3];
 EXEC:function:Test:[4, 5, 6];
 
 LOOP:int:3;
-
 	EXEC:function:Test:[8, 9, 10];
-
 END:null:0;
